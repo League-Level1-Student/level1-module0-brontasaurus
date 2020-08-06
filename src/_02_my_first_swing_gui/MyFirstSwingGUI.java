@@ -16,41 +16,41 @@ public class MyFirstSwingGUI {
 	public void run() {
 
 		// 1. Declare and initialize an object of the JFrame class
-
+  JFrame door = new JFrame();
 		// 2. Set your JFrame object to be visible
-
+door.setVisible(true);
 		// 3. Open MyFirstSwingGUIRunner and run your program. Do you see your window? It's probably very
 		// small.
 
 		// 4. Use your JFrame to call setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE)
-
+door.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		// 5. Declare and initialize an object of the JPanel class
-
+JPanel hinge = new JPanel();
 		// 6. Declare and initialize an object of the JLabel class
-
+JLabel writer = new JLabel();
 		// 7. Set the text of the JLabel to a lovely greeting
-
+writer.setText("AHOY YE BILGE-SUCKING LANDLUBBERS");
 		// 8. Add the JPanel object to the JFrame
-
+door.add(hinge);
 		// 9. Add the JLabel object to the JPanel
-
+hinge.add(writer);
 		// 10. Pack your JFrame
-
+door.pack();
 		// 11. Run your program again. Do you see your message?
-
+//yes
 		// 12. Use your JLabel to call setIcon(loadImage())
-
+writer.setIcon(loadImage());
 		// 13. Re-pack the JFrame object
-
+door.pack();
 		// 14. Run the program one more time. Do you see the image?
-
+//yes i do. not a very good choice though.
 	}
 
 	public ImageIcon loadImage() {
 		try {
 			return new ImageIcon(ImageIO.read(new MyFirstSwingGUI().getClass().getResourceAsStream("java.png")));
 		} catch (IOException e) {
-			e.printStackTrace()
+			e.printStackTrace();
 			return null;
 		}
 	}
