@@ -16,21 +16,7 @@ public class koook implements ActionListener {
             frame.add(button);
             frame.pack();
             button.addActionListener(this);
-            button.setText("button of fortune");
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
+            button.setText("button of fortune");    
        }
 
 		@Override
